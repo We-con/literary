@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urls xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 0 : bookId , 1 :postId ,  -->
+    <!-- complete-->
+    <url android:id="@+id/api_book_search">/v1/book/search?keyword={0}</url>
+
+    <url android:id="@+id/api_add_photo">/v1/image/add</url>
+    <url android:id="@+id/api_add_member">/v1/user</url>
+
+
+    <!-- not yet 여기서부터 작업 하나하나 해가면 됩니다.-->
+    <url android:id="@+id/api_book">/v1/book/{0}</url>
+    <url android:id="@+id/api_book_all">/v1/book/all</url>
+    <url android:id="@+id/api_book_del">/v1/book/{0}/delete</url>
+
+    <url android:id="@+id/api_other_posts_on_book">/v1/post/{0}/post/list</url>
+
+    <url android:id="@+id/api_get_post">/v1/post/{1}</url>
+    <url android:id="@+id/api_add_post">/v1/post/{0}</url>
+    <url android:id="@+id/api_remove_post">/v1/post/{0}/{1}remove</url>
+
+    <url android:id="@+id/api_comment_on_post">/v1/comment/{postId}/list</url>
+    <url android:id="@+id/api_comment_add">/v1/comment/{postId}/add</url>
+    <url android:id="@+id/api_comment_update">/v1/comment/{postId}/update</url>
+    <url android:id="@+id/api_comment_remove">/v1/comment/{postId}/{commentId}/remove</url>
+
+
+    <url android:id="@+id/api_test">/v1/test</url>
+
+
+</urls>

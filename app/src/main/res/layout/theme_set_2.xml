@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/theme_set"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/edit_content"
+    android:layout_margin="5dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+
+    <ImageView
+        android:id="@+id/theme_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:alpha="0.4"
+        android:src="@drawable/ic_red" />
+
+    <ImageView
+        android:id="@+id/theme_3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:alpha="0.4"
+        android:src="@drawable/ic_green" />
+
+    <ImageView
+        android:id="@+id/theme_4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:alpha="0.4"
+        android:src="@drawable/ic_blue" />
+
+    <ImageView
+        android:id="@+id/theme_5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:alpha="0.4"
+        android:src="@drawable/ic_brown" />
+</RadioGroup>

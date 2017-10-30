@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="13dp"
+    android:background="#00F00F0F">
+
+    <RelativeLayout
+        android:layout_width="308dp"
+        android:layout_height="488dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/card_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_shadow_background"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/card_thumbnail"
+            android:layout_width="209dp"
+            android:layout_height="227dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_image_add"
+            android:background="@drawable/round_shadow_background"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="5dp" />
+
+        <TextView
+            android:id="@+id/main_card_book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_thumbnail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:text="토닥토닥"
+            android:textColor="#151515"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/main_card_book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_card_book_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="18dp"
+            android:singleLine="true"
+            android:text="이수용 지금 | 한빛 출판"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+        <LinearLayout
+            android:id="@+id/post_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/main_card_book_author">
+
+            <TextView
+                android:id="@+id/post_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="22sp"
+                android:textColor="#333333"/>
+          <TextView
+                android:id="@+id/post_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="개"
+                android:textSize="12sp"
+                android:textColor="#999999"/>
+
+            <ImageView
+                android:id="@+id/btn_write"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/btn_write_nor"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/tmp"
+            android:layout_below="@id/post_pre"
+            android:layout_marginTop="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/current_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/progressbar"
+                android:text="35.p"
+                android:textSize="13sp"
+                android:textColor="#49a1f9"
+                android:textStyle="bold" />
+
+            <com.reader.readingManagement.widget.CustomProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_below="@id/current_page"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:max="100"
+                android:progress="10"
+                android:progressDrawable="@drawable/custom_progress_bar_horizontal" />
+
+
+            <TextView
+                android:id="@+id/total_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/progressbar"
+                android:layout_alignRight="@id/progressbar"
+                android:textSize="13sp"
+                android:textColor="#999999"
+                android:text="356.p" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/main_card_one_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tmp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:text="책이 어떤 내용인지 아시겠나요? "
+            android:textColor="#999999"
+            android:layout_marginTop="10sp"
+            android:textSize="12dp" />
+    </RelativeLayout>
+</RelativeLayout>
+

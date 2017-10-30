@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "499340073472",
+    "firebase_url": "https://literary-e977d.firebaseio.com",
+    "project_id": "literary-e977d",
+    "storage_bucket": "literary-e977d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499340073472:android:ba217a9bbcf229f2",
+        "android_client_info": {
+          "package_name": "com.reader.readingManagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499340073472-0126d7e2k4hd65o7932n6sunbkkm9b0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBOZc9W0eOPIiKu-cwf1ZUCyyAxvXtc8A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_blue_background">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/comment_container"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="15dp"
+        android:padding="5dp"
+        android:background="@drawable/round_background" />
+
+    <RelativeLayout
+        android:id="@+id/comment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <EditText
+            android:id="@+id/comment_editor"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_toLeftOf="@+id/comment_send"
+            android:background="@drawable/round_background"
+            android:lines="2"
+            android:maxLines="3" />
+
+        <Button
+            android:id="@+id/comment_send"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/push"
+            android:text="게시"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

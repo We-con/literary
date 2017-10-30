@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp">
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingRight="5dp"
+        android:textColor="#222"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="우와 너무 공감됩니다요"
+        android:textColor="#555"
+        android:textSize="12dp" />
+</LinearLayout>

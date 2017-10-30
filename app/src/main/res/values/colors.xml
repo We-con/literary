@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="shader">#33000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="highlightColor">#55AAFF00</color>
+    <color name="removeColor">#55EEEEEE</color>
+
+
+    <color name="pen_red">#55FF5581</color>
+    <color name="pen_yellow">#55AAFF00</color>
+    <color name="pen_blue">#555570FF</color>
+
+</resources>

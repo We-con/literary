@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">문학소년</string>
+    <string name="your_name">민석님 하이!</string>
+    <string name="post_hint">당신의 감정은 어떤가요?</string>
+</resources>

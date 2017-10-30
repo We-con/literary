@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lantouzi.wheelview.WheelView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/page_wheel"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/round_line_background"
+    app:lwvHighlightColor="#5d8bf9"
+    app:lwvIntervalFactor="0.5" />

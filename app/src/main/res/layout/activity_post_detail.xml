@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_blue_background"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_background"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/post_detail_top_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <include
+                    layout="@layout/post_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/round_line_background">
+
+                <com.reader.readingManagement.post.RectImageView
+                    android:id="@+id/post_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:riv_corner_radius="5dp" />
+
+                <ViewStub
+                    android:id="@+id/book_info_on_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/post_image"
+                    android:layout_alignRight="@id/post_image"
+                    android:layout="@layout/book_info" />
+
+
+                <include
+                    android:id="@+id/post_include"
+                    layout="@layout/post_text_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/post_image"
+                    android:visibility="gone" />
+
+            <ViewStub
+                android:id="@+id/book_info_on_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_include"
+                android:layout="@layout/book_info"
+                android:padding="10dp" />
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/comment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="15dp"
+                    android:text="12dp"
+                    android:textColor="#b0b0b0" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/ago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="10dp"
+                android:textColor="#b0b0b0"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

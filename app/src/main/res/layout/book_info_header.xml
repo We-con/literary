@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="148dp"
+    android:layout_marginBottom="7dp">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:background="@drawable/round_background"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:layout_marginTop="35dp">
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/my_books_thumnail"
+        android:layout_marginTop="25dp"
+        android:paddingTop="20dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+
+        <LinearLayout
+            android:id="@+id/my_books_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/my_books_name"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="토닥토닥"
+                android:textColor="#353535"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/my_books_author"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lines="2"
+                android:text="이수용 지금 | 한빛 출판"
+                android:textColor="#81848a"
+                android:textSize="13dp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/my_books_currentP"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/progressbar"
+            android:layout_alignLeft="@+id/progressbar"
+            android:lines="1"
+            android:text="1P"
+            android:textColor="#a4a8b1"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/my_books_totalP"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/progressbar"
+            android:layout_alignRight="@+id/progressbar"
+            android:lines="1"
+            android:text="260P"
+            android:textColor="#a4a8b1"
+            android:textSize="13dp" />
+
+        <com.reader.readingManagement.widget.CustomProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:max="100"
+            android:progress="10"
+            android:progressDrawable="@drawable/custom_progress_bar_horizontal" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/my_books_thumnail"
+        android:layout_width="102dp"
+        android:layout_height="133dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="13dp"
+        android:src="@drawable/image" />
+
+</RelativeLayout>

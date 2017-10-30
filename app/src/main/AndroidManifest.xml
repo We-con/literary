@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reader.readingManagement">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />            <!-- 임시저장 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />            <!-- 임시저장 -->
+
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="com.reader.readingManagement.BookApplication"
+        android:allowBackup="true"
+        android:exported="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.reader.readingManagement.MainActivity" />
+
+        <activity
+            android:name="com.reader.readingManagement.post.add.PostAddActivity"
+            android:label="포스트작성">
+
+        </activity>
+
+        <activity
+            android:name="com.reader.readingManagement.post.add.imagepicker.TempActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <!--홈-->
+        <activity
+            android:name="com.reader.readingManagement.home.HomeActivity"
+            android:label="홈,">
+
+        </activity>
+
+        <activity
+            android:name="com.reader.readingManagement.post.add.PostEditActivity"/>
+
+
+        <!--책관련-->
+        <activity
+            android:name="com.reader.readingManagement.book.info.BookInfoActivity"
+            android:label="책상세.">
+
+        </activity>
+        <activity
+            android:name="com.reader.readingManagement.book.add.AddBookActivity"
+            android:label="팩 추가.">
+
+        </activity>
+        <activity
+            android:name="com.reader.readingManagement.my.books.MyBooksActivity"
+            android:label="내서재">
+
+        </activity>
+
+        <!--포스트-->
+        <activity android:name="com.reader.readingManagement.post.detail.FullImageActivity" />
+
+
+        <!--개인화
+        <activity android:name="com.reader.book.user.NaverLoginActivity" />-->
+        <activity
+            android:name="com.reader.readingManagement.user.LoginActivity"
+            android:label="로그인">
+        </activity>
+        <activity android:name="com.reader.readingManagement.user.MyPageActivity" />
+
+        <!-- 테스트 -->
+        <service android:name="com.reader.readingManagement.PushIntentService" android:enabled="true" android:exported="true"/>
+
+        <!-- 네이버 아이디로 로그인에서 사용하는 액티비티를 등록 -->
+        <activity android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity" />
+        <activity android:name="com.reader.readingManagement.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.reader.readingManagement.PushActivity"/>
+        <activity
+            android:name="com.reader.readingManagement.DialogActivity"
+            android:label="Dialog"
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
+        <activity android:name="com.reader.readingManagement.home.GuideActivity" android:label="Guide"/>
+
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+            android:label="OAuth2.0 In-app" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+    </application>
+
+
+</manifest>

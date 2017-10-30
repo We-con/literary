@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_blue_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/book_image"
+        android:layout_width="90dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_shadow_background"
+        app:riv_corner_radius="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image" />
+
+    <EditText
+        android:id="@+id/search_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_image"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_background"
+        android:hint="책 이름을 입력하세요."
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textSize="17dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/add_book_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_book"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_background" />
+
+</RelativeLayout>
